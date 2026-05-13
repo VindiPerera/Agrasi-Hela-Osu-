@@ -104,11 +104,11 @@ const submit = () => {
       <p class="text-2xl font-bold">
         <i class="ri-global-line"></i>
 
-        {{ companyInfo?.website || 'JAAN Network (Pvt) Ltd' }}
+        {{ companyInfo?.website || 'Agrasi Hela Osu (pvt) Ltd' }}
       </p>
       <p class="text-2xl">|</p>
       <p class="text-2xl font-bold">
-        JAAN PoS <span class="font-normal">(Textile) Version 1.1</span>
+        Agrasi Hela Osu POS <span class="font-normal">(Textile) Version 1.1</span>
       </p>
     </div>
     <div
@@ -116,7 +116,7 @@ const submit = () => {
     >
       <p class="text-2xl text-center text-white">
         Powered by
-        <span class="font-bold text-red-500">JAAN Network (Pvt) Ltd</span> @2024
+        <span class="font-bold text-red-500">Agrasi Hela Osu (pvt) Ltd</span> @2024
       </p>
     </div>
   </section>

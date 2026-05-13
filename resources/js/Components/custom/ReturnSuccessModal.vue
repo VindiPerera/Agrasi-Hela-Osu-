@@ -248,8 +248,8 @@ const handlePrint = () => {
                     </div>
 
                     <div class="footer">
-                        <p>Thank you for choosing NP Motors. Ride Safe!</p>
-                        <p style="font-weight: bold;">Powered by JAAN Network</p>
+                        <p>Thank you for choosing Agrasi Hela Osu (pvt) Ltd.</p>
+                        <p style="font-weight: bold;">Powered by Agrasi Hela Osu (pvt) Ltd</p>
                         <p>${new Date().toLocaleTimeString()}</p>
                     </div>
                 </div>
