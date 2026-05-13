@@ -277,15 +277,19 @@ const formattedDate = computed(() =>
   const MM_TO_PX = 3.78;
   const LABEL_W_MM = 38;
   const LABEL_H_MM = 25;
-  const BARCODE_H_MM = 12;
+  const BARCODE_H_MM = 10;
+
+  const expireDate = selectedProduct?.expire_date
+    ? new Date(selectedProduct.expire_date).toLocaleDateString('en-GB')
+    : null;
 
   // Build labels HTML
   const labelsHtml = Array.from({ length: count }).map((_, idx) => `
     <div class="barcode-label">
       <div class="product-name">${selectedProduct?.name || 'N/A'}</div>
-
       <div class="barcode-svg"><svg id="barcode${idx + 1}"></svg></div>
-      <div class="bottom-info">${(selectedProduct?.selling_price ?? 'N/A')} LKR</div>
+      <div class="bottom-info">Rs. ${(selectedProduct?.retail_price ?? selectedProduct?.selling_price ?? 'N/A')}</div>
+      ${expireDate ? `<div class="expire-info">Exp: ${expireDate}</div>` : ''}
     </div>
   `).join('');
 
@@ -370,11 +374,20 @@ const formattedDate = computed(() =>
         }
 
         .bottom-info {
-          font-size: 12px;
+          font-size: 11px;
           font-weight: 700;
-          line-height: 1;
+          line-height: 1.1;
           width: 100%;
           text-align: center;
+        }
+
+        .expire-info {
+          font-size: 9px;
+          font-weight: 600;
+          line-height: 1.1;
+          width: 100%;
+          text-align: center;
+          color: #000;
         }
 
         @media print {
